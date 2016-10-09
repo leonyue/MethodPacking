@@ -13,6 +13,7 @@
 		8D27223A1D95196A00FEA035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D2722381D95196A00FEA035 /* Main.storyboard */; };
 		8D27223C1D95196A00FEA035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D27223B1D95196A00FEA035 /* Assets.xcassets */; };
 		8D27223F1D95196A00FEA035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D27223D1D95196A00FEA035 /* LaunchScreen.storyboard */; };
+		8D2722481D95198100FEA035 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2722471D95198100FEA035 /* TestClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		8D27223B1D95196A00FEA035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D27223E1D95196A00FEA035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D2722401D95196A00FEA035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D2722461D95198100FEA035 /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
+		8D2722471D95198100FEA035 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 			children = (
 				8D2722321D95196A00FEA035 /* AppDelegate.h */,
 				8D2722331D95196A00FEA035 /* AppDelegate.m */,
+				8D2722461D95198100FEA035 /* TestClass.h */,
+				8D2722471D95198100FEA035 /* TestClass.m */,
 				8D2722351D95196A00FEA035 /* ViewController.h */,
 				8D2722361D95196A00FEA035 /* ViewController.m */,
 				8D2722381D95196A00FEA035 /* Main.storyboard */,
@@ -110,7 +115,7 @@
 				TargetAttributes = {
 					8D27222B1D95196A00FEA035 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = XJGKD4Z97L;
+						DevelopmentTeam = L9P52E65L5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -151,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D2722481D95198100FEA035 /* TestClass.m in Sources */,
 				8D2722371D95196A00FEA035 /* ViewController.m in Sources */,
 				8D2722341D95196A00FEA035 /* AppDelegate.m in Sources */,
 				8D2722311D95196A00FEA035 /* main.m in Sources */,
@@ -273,7 +279,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XJGKD4Z97L;
+				DEVELOPMENT_TEAM = L9P52E65L5;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = TestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuneec.TestProject;
@@ -285,7 +292,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XJGKD4Z97L;
+				DEVELOPMENT_TEAM = L9P52E65L5;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = TestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuneec.TestProject;
@@ -312,6 +320,7 @@
 				8D2722451D95196A00FEA035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

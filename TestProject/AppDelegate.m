@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <objc/message.h>
 
 @interface AppDelegate ()
 
@@ -15,8 +16,28 @@
 @implementation AppDelegate
 
 
+- (id)testMethod:(NSString *)arg1 :(NSString *)arg2 :(NSString *)arg3 {
+    NSString *s = [NSString stringWithFormat:@"%@,%@,%@",arg1,arg2,arg3];
+    NSLog(@"s:%@",s);
+    return s;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    objc_msgSend(self,@selector(testMethod:::),@"arg1",@"arg2",@"arg3");
+    NSInvocation *invo = [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:@selector(testMethod:::)]];
+    [invo setTarget:self];
+    [invo setSelector:@selector(testMethod:::)];
+    NSString *a = @"arg1";
+    NSString *b = @"arg2";
+    NSString *c = @"arg3";
+    [invo setArgument:&a atIndex:2];
+    [invo setArgument:&b atIndex:3];
+    [invo setArgument:&c atIndex:4];
+    [invo invoke];
+    id anObject;
+    [invo getReturnValue:&anObject];
+    NSLog(@"anObject:%@",anObject);
     return YES;
 }
 
